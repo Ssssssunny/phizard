@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}{% endblock %}
+
+{% block page_content %}
+
+<div class="container">
+    <h3>PATTERN </h3>
+    <hr>
+    <p id="x_ax" style="display:none;">{{ xtest }}</p>
+    <p id="x_axis" style="display:none;">{{ xaxis }}</p>
+    <!--<p id="legend" style="display:none;">{{ legend }}</p>-->
+
+    <p id="legend" style="display:none;">{{ graphs }}</p>
+    <p id="arima" style="display:none;">{{ arima }}</p>
+    <p id="lstm" style="display:none;">{{ lstm }}</p>
+    <div class="clearfix col-sm-9">
+        <div id="container" class="left"  style="height:400px;width:1200px;"></div>
+    </div>
+
+    <div class="clearfix col-sm-9" style="margin-top:60px;">
+        <h3>LSTM ANALYSIS</h3>
+        <hr>
+        <div id="container2" class="left"  style="height:400px;width:1200px;"></div>
+    </div>
+
+    <div class="clearfix col-sm-9" style="margin-top:60px;">
+        <h3>ARLMA ANALYSIS</h3>
+        <hr>
+        <div id="container3" class="left"  style="height:400px;width:1200px;"></div>
+    </div>
+
+</div>
+{% endblock %}

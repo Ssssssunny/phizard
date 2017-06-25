@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}{% endblock %}
+
+{% block page_content %}
+
+<div class="container">
+    <form class="form-signin" action="" method="post" name="">
+        <div class="form-signin-heading text-center">
+            <h1 class="sign-title">Register</h1>
+        </div>
+        <div class="login-wrap">
+            {{ form.hidden_tag() }}
+            <p>{{ form.username(autofocus="autofocus",placeholder="Username") }}</p>
+            <p>{{ form.password(autofocus="autofocus",placeholder="Password") }}</p>
+            <p>Are you admin ? {{ form.tag() }}</p>
+            <button type="submit" value="Register" class="btn btn-login btn-block">register
+            </button>
+
+        </div>
+
+    </form>
+</div>
+{% endblock %}

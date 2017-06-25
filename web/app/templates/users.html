@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}{% endblock %}
+
+{% block page_content %}
+
+<div class="container">
+    <div class="post-tabs">
+    <h1>Users</h1>
+
+    <hr>
+    {% include '_items.html' %}
+</div>
+{% if pagination %}
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, endpoint) }}
+</div>
+{% endif %}
+
+</div>
+{% endblock %}
